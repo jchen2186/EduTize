@@ -1,5 +1,9 @@
 <html>
   <head>
+    {% block stylesheet %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }} ">
+    {% endblock %}
+
     {% if title %}
     <title>{{ title }} - EduTize</title>
     {% else %}

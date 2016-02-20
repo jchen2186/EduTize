@@ -1,5 +1,6 @@
-{% extends "layout.html" %}
+{% extends "base.html" %}
 {% block body %}
+  <link rel="stylesheet" type="text/css" href="styles.css">
   <h2>Add Upcoming Assignment</h2>
   {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
   <form action="{{ url_for('course_created') }}" method="post">
@@ -9,14 +10,13 @@
       <dt>Course:</dt>
       <dd><input type=text name=course></dd> <!--category is variable/input-->
       <dt>Category:</dt>
-      <dd><input type=text name=category> <!--course is variable/input-->
+      <dd> <!--course is variable/input-->
         <form>
           <input type="radio" name="heirarchy" value="quiz">Quiz<br>
           <input type="radio" name="heirarchy" value="homework">Homework<br>
           <input type="radio" name="heirarchy" value="lab">Lab</br>
           <input type="radio" name="heirarchy" value="test">Test</br>
         </form>
-      </dd>
       <dt>Deadline:<br>(mm/dd/yyyy)</dt>
       <dd><input type=text name=deadline></dd><!--deadline is variable/input-->
     </dl>
