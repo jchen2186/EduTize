@@ -1,3 +1,6 @@
+from Assignment import Assignment
+from User import User
+
 class Course:
 	name = None
 	gradeDist = None

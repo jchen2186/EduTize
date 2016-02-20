@@ -1,6 +1,10 @@
 {% extends "base.html" %}
+
+{% block title %} Add Upcoming Course {% endblock}
+
+<link rel="stylesheet" type="text/css" href="styles.css">
+
 {% block body %}
-  <link rel="stylesheet" type="text/css" href="styles.css">
   <h2>Add Upcoming Assignment</h2>
   {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
   <form action="{{ url_for('course_created') }}" method="post">

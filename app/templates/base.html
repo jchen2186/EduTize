@@ -1,26 +1,37 @@
-<html>
+<!DOCTYPE html>
+
+<html lang-"en">
   <head>
-    {% if title %}
-    <title>{{ title }} - EduTize</title>
-    {% else %}
-    <title>Welcome to EduTize</title>
-    {% endif %}
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %} | EduTize</title>
+    {% block stylesheet %}
+    {% endblock %}
   </head>
   <body>
-    <div>EduTize Logo <p></p>
+    <div>EduTize Logo</div>
+
 <center>
 
 <div id ="menu-outer">
   <div class="table">
   <ul>
-  <li><a href="/add_upcoming_assignment">Add Task</a></li>
-  <li><a href="/add_course">Add Course</a></li>
-  <li><a href="/index">Home</a></li>
+    <li><a href="/index">Home</a></li>
+    <li><a href="/add_course">Add Course</a></li>
+    <li><a href="/add_upcoming_assignment">Add Task</a></li>
+<!-- check the link i shared. the person used nested lists to
+      make the dropdown, and i don't want to mess around with the
+      css file, so i'll leave it to you guys.
+
+       <ul>
+        <li><a href="#">Past Assignment</a></li>
+        <li><a href="#">Upcoming Assignment</a></li>
+      </ul> -->
   </ul>
 </div>
 </div>
 </center>
     <hr>
-    {% block content %}{% endblock %}
+
+    {% block body %}{% endblock %}
   </body>
 </html>

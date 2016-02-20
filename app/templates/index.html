@@ -1,19 +1,11 @@
-<html>
-  <head>
-    {% block stylesheet %}
-        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }} ">
-    {% endblock %}
+{% extends "base.html" %}
 
-    {% if title %}
-    <title>{{ title }} - EduTize</title>
-    {% else %}
-    <title>Welcome to EduTize</title>
-    {% endif %}
-  </head>
-  <body>
-  	{% extends "base.html" %}
-	{% block content %}
-	    <h1>Hi, {{ user.nickname }}!</h1>
-	{% endblock %}
-  </body>
-</html>
+{% block title %} Home {% endblock %}
+
+{% block stylesheet %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }} ">
+{% endblock %}
+
+{% block body %}
+    <h1>Hi, {{ user.nickname }}!</h1>
+{% endblock %}
