@@ -1,28 +1,23 @@
 {% extends "base.html" %}
 
-{% block title %} Add Upcoming Course {% endblock}
-
-<link rel="stylesheet" type="text/css" href="styles.css">
+{% block title %} Add Upcoming Assignment {% endblock}
 
 {% block body %}
   <h2>Add Upcoming Assignment</h2>
-  {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
+<!-- 
   <form action="{{ url_for('course_created') }}" method="post">
-    <dl>
-      <dt>Name:</dt>
-      <dd><input type=text name=name></dd> <!--course is the var name/input-->
-      <dt>Course:</dt>
-      <dd><input type=text name=course></dd> <!--category is variable/input-->
-      <dt>Category:</dt>
-      <dd> <!--course is variable/input-->
-        <form>
-          <input type="radio" name="heirarchy" value="quiz">Quiz<br>
-          <input type="radio" name="heirarchy" value="homework">Homework<br>
-          <input type="radio" name="heirarchy" value="lab">Lab</br>
-          <input type="radio" name="heirarchy" value="test">Test</br>
-        </form>
-      <dt>Deadline:<br>(mm/dd/yyyy)</dt>
-      <dd><input type=text name=deadline></dd><!--deadline is variable/input-->
-    </dl>
-  </form>
+    Name:
+    <input type=text name=name>
+    Course:
+    <input type=text name=course>
+    Category:
+      <form>
+        <input type="radio" name="heirarchy" value="quiz">Quiz<br>
+        <input type="radio" name="heirarchy" value="homework">Homework<br>
+        <input type="radio" name="heirarchy" value="lab">Lab</br>
+        <input type="radio" name="heirarchy" value="test">Test</br>
+      </form>
+    Deadline (mm/dd/yy):
+      <input type=text name=deadline>
+  </form> -->
 {% endblock %}

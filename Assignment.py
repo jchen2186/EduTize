@@ -16,10 +16,6 @@ class Assignment:
         self.course = c
         self.category = t
         self.name = n
-        '''
-        self.deadline = d
-        self.goalGrade = g
-        '''
 
     def pastAssign(self, grade): # actual grade received
         self.receivedGrade = grade

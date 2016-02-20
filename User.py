@@ -1,3 +1,5 @@
+
+
 class User:
 	pastCourses = None
 	currCourses = None

@@ -7,18 +7,10 @@ from app import app
 @app.route('/add_upcoming_assignment')
 
 def index():
-	user = {'nickname': 'Miguel'}  # fake user
-	# add buttons to add course, assignments or whatever
-	return render_template("index.html",
-						   title = 'Home',
-						   user = user)
+	return render_template("/index.html")
 
 def addCourse():
-	return render_template("add_course.html",
-							title = "Add Course",
-							user = user)
+	return render_template("/add_course.html")
 
 def addUpcoming():
-	return render_template("add_upcoming_assignment.html",
-							title = "Add Upcoming Assignment",
-							user = user)
+	return render_template("/add_upcoming_assignment.html")

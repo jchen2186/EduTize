@@ -4,8 +4,8 @@
   <head>
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %} | EduTize</title>
-    {% block stylesheet %}
-    {% endblock %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }} ">
+
   </head>
   <body>
     <div>EduTize Logo</div>
