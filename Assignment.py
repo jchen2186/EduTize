@@ -3,7 +3,7 @@ from datetime import datetime as dt
 
 class Assignment():
     course = null
-    type = null
+    category = null
     deadline = null
     grade = []
 
@@ -11,14 +11,14 @@ class Assignment():
 
     def __init__(c, t, d, g):
     self.course = c
-    self.type = t
+    self.category = t
     self.deadline = d
     self.grade = g
 
     def compare(self, other):
-        if heirarchy.index(self.type) > heirarchy.index(other.type):#if the type has a greater priority
+        if heirarchy.index(self.category) > heirarchy.index(other.category):#if the category has a greater priority
             return(self)#returns entire assignment object
-        elif heirarchy.index(self.type) < heirarchy.index(other.type):
+        elif heirarchy.index(self.category) < heirarchy.index(other.category):
             return(other)
         else:
             a = dt.strptime((self.deadline), "%m/%d/%y") #deadline format m/d/y
