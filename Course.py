@@ -1,18 +1,22 @@
 class Course:
+	name = None
+	gradeDist = None
+	goalGPA = None
+	currGPA = None
+	assignments = None
 
 	def __init__(self, name, goalGPA):
 		self.name = name
 		self.gradeDist = {}
-		self.currGPA = None
 		self.goalGPA = goalGPA
-		assignments = [] # array that holds Assignment objects
+		self.assignments = [] # array that holds Assignment objects
 
 	def addAssignment(self, assign):
 		self.assignments.append(assign)
 
-	def getGPA(self):
-		''' variables for sum and num for each category
-		are created in order to find averages for each '''
+	def getGPA(self): # out of 100
+		# sumCategory adds up all the grades of that category
+		# numCategory adds up the number of assignments in that category
 		sumQuizzes = sumHomeworks = sumLabs = sumTests = 0
 		numQuizzes = numHomeworks = numLabs = numTests = 0
 		for assign in self.assignments:
@@ -28,6 +32,7 @@ class Course:
 			elif (assign.category == "test"):
 				sumTests += assign.grade
 				numTests += 1
+		# find the average for each category
 		quizAvg = sumQuizzes / numQuizzes
 		homeworkAvg = sumHomeworks / numHomeworks
 		labAvg = sumLabs / numLabs
@@ -41,16 +46,23 @@ class Course:
 	def setGPA(self):
 		self.currGPA = getGPA(self)
 
-	def setGradeDist(quizPercent, homeworkPercent, labPercent, testPercent):
-		gradeDist["quiz"] = quizPercent
-		gradeDist["homework"] = homeworkPercent
-		gradeDist["lab"] = labPercent
-		gradeDist["test"] = testPercent
+	# given a syllabus, user can add how the prof calculates the grade
+	def setGradeDist(self, quizPercent, homeworkPercent, testPercent):
+		self.gradeDist["quiz"] = quizPercent
+		self.gradeDist["homework"] = homeworkPercent
+		self.gradeDist["test"] = testPercent
+
+	# if lab is a component of the class
+	def setGradeDist(self, quizPercent, homeworkPercent, testPercent, labPercent):
+		self.gradeDist["quiz"] = quizPercent
+		self.gradeDist["homework"] = homeworkPercent
+		self.gradeDist["test"] = testPercent
+		self.gradeDist["lab"] = labPercent
 
 	def compare(self, other): # returns course with higher priority
-		if (getGPA(self) > getGPA(other)):
+		if (self.currGPA > other.currGPA):
 			return other
-		elif (getGPA(self) < getGPA(other)):
+		elif (self.currGPA < other.currGPA):
 			return self
 		else:
 			return "Both courses have the same GPA"

@@ -4,22 +4,18 @@ from Course import Course
 
 calculus = Course("Calculus",90)
 calculus.currGPA = 90
+mathHW = Assignment(calculus,"homework","hw 3") # course, category, name
+calculus.addAssignment(mathHW)
+
 english = Course("English",95)
 english.currGPA = 95
+englishHW = Assignment(english,"homework","hw 1")
+english.addAssignment(english)
 
-mathHW = Assignment(calculus,"homework","hw 3")
-print mathHW.course.name
-print mathHW.category
-#mathHW.pastAssign(90)
-#print mathHW.receivedGrade
-
-mathHW.upcomingAssign(95,"03/01/16")
-#print mathHW.goalGrade
-#print time.strptime(mathHW.deadline, "%d %b %y")
-
-englishHW = Assignment(english,"homework","paper 2")
+mathHW.upcomingAssign(95,"03/01/16") # goal grade, deadline
 englishHW.upcomingAssign(100,"03/03/16")
-#print englishHW.goalGrade
-#print time.strptime(englishHW.deadline,"%d %b %y")
 
-print mathHW.compare(englishHW).name
+print mathHW.compare(englishHW).name # get the name of the assignment
+										# with the higher priority
+
+calculus.setGradeDist(90, 90, 90, 90)
