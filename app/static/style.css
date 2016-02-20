@@ -73,24 +73,29 @@ li {
 }
 
 li a {
+    width: 150px;
     display: block;
-    color: white;
+    font-weight: bold;
+    color: #b3b1c5;
     text-align: center;
-    padding: 14px 16px;
+    text-transform: uppercase;
+    padding: 15px;
     background-color: #817E9F;
     text-decoration: none;
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
 li a:hover {
-    background-color: #111;
+    background-color: #b3b1c5;
+    color: #817E9F;
 }
 
 #menu-outer {
-	height: 84px;
-	background: url(images/bar-bg.jpg) repeat-x;
+	height: 50px;
 }
 
 .table {
-	display: table;   /* Allow the centering to work */
+	display: table;
 	margin: 0 auto;
 }
