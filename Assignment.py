@@ -13,7 +13,7 @@ class Assignment():
     self.course = c
     self.type = t
     self.deadline = d
-    self.g = grade
+    self.grade = g
 
     def compare(self, other):
         if heirarchy.index(self.type) > heirarchy.index(other.type):#if the type has a greater priority
@@ -29,7 +29,7 @@ class Assignment():
                 return(other)
             else:    # if both are due on same day
              #compare the grades for each class
-                 if self.g < other.g:
+                 if self.grade < other.grade:
                      return(self)
                  else:
                      return(other)
