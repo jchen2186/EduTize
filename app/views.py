@@ -21,4 +21,4 @@ def addNewTask():
 
 @app.route('/completed-task')
 def addCompletedTask():
-	return render_template("/completed_course.html")
+	return render_template("/completed_task.html")
