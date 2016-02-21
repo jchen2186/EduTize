@@ -5,28 +5,42 @@
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %} | EduTize</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }} ">
-
   </head>
-  <body>
+
+    <body>
     <div>EduTize Logo</div>
 
 <center>
 
 <div id ="menu-outer">
   <div class="table">
+
+    <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Home</button>
+    </div>
+<!--
   <ul>
     <li><a href="/index">Home</a></li>
-    <li><a href="/add_course">Add Course</a></li>
-    <li><a href="/add_upcoming_assignment">Add Task</a></li>
-<!-- check the link i shared. the person used nested lists to
-      make the dropdown, and i don't want to mess around with the
-      css file, so i'll leave it to you guys.
+  </ul>-->
+    <!-- for adding course (two options: complete, incomplete)-->
+    <div class="dropdown">
+      <button class="dropbtn">Add Course</button>
+      <div class="dropdown-content">
+          <a href="#">Completed Course</a>
+          <a href="#">Current Course</a>
+      </div>
+    </div>
 
-       <ul>
-        <li><a href="#">Past Assignment</a></li>
-        <li><a href="#">Upcoming Assignment</a></li>
-      </ul> -->
-  </ul>
+    <!--for  adding tasks (two options: complete, incomplete) -->
+
+    <div class="dropdown">
+        <button class="dropbtn">Add Task</button>
+        <div class="dropdown-content">
+            <a href="#">Past Task</a>
+            <a href="#">Current Task</a>
+          </div>
+        </div>
+
 </div>
 </div>
 </center>
