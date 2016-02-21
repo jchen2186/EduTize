@@ -122,3 +122,28 @@ input[type=submit] {
   width: 10%;
   height:20%;
 }
+
+td.ranking {
+  background-color: #22bb77;
+  text-align: center;
+  line-height: 80px;
+  font-size: 80px;
+  width: 30%;
+  height: 100px;
+  margin: 10px;
+
+
+
+}
+
+td.assignment {
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: #008888;
+  text-align: left;
+  line-height: 10px;
+  width: 70%;
+  height: 100px;
+  font-family: sans-serif;
+  overflow: hidden;
+}
