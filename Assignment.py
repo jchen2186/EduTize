@@ -20,8 +20,8 @@ class Assignment:
     def pastAssign(self, grade): # actual grade received
         self.receivedGrade = grade
 
-    def upcomingAssign(self, grade, deadline): # goal grade user wants
-        self.goalGrade = grade
+    def upcomingAssign(self, deadline): # add grade argument later
+        #self.goalGrade = grade <-- goal grade user wants,
         self.deadline = deadline
 
     def compare(self, other): # returns the assignment with higher priority
