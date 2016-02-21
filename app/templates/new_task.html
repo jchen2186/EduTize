@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %} Add Task {% endblock %}
+
+{% block body %}
+
+<form>
+  NAME OF TASK<input type="text" name="course">
+  <br>
+  COURSE <input type="text" name="course">
+  <br>
+  TYPE OF ASSIGNMENT:
+  <form>
+    <input type="radio" name="type" value="quiz">Quiz<br>
+    <input type="radio" name="type" value="homework"> Homework<br>
+    <input type="radio" name="type" value="lab">Lab<br>
+    <input type="radio" name="type" value="test">Test<br>
+  </form>
+  <br>
+  DUE DATE (MM/DD/YYYY): <input type="text" name="date">
+  <br>
+  <input type="submit" value="Submit">
+</form>
+{% endblock %}
