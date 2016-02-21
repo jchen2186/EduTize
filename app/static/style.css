@@ -1,66 +1,42 @@
 html, body {
-  text-align: center;
+  text-align: left;
   margin: 0;
-  padding: 5%;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
   font-family: sans-serif;
   font-size-adjust: 0.58;
   background: #f4f1cc;
 }
 
-a, h1, h2 {
-  color: #65524D;
-}
-
-h1, h2 {
-  font-family: sans-serif,
-  text-align: center;
-}
-
 h1 {
-  border-bottom: 2px
+  font-family: 'Century Gothic';
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: #52403b;
+  text-transform: uppercase;
 }
 
 h2 {
-  font-size: 1.2em;
+  font-family: 'Century Gothic';
+  font-size: 10px;
+  letter-spacing: 5px;
+  font-weight: bold;
+  color: #2c4937;
+  text-transform: uppercase;
 }
 
-.page {
-  margin: 2em auto;
-  width: 35em;
-  border: 5px solid #ccc;
-  padding: 0.8em;
-  background: white;
+#content {
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  width: 450px;
+  height: auto;
 }
 
-.entries {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.entries li {
-  margin: 0.8em 1.2em;
-}
-
-.entries li h2 {
-  margin-left: -1em;
-}
-
-.add-entry {
-  font-size: 0.9em;
-  border-bottom: 1px solid #ccc;
-}
-
-.add-entry dl   { font-weight: bold; }
-.metanav        { text-align: right; font-size: 0.8em; padding: 0.3em;
-                  margin-bottom: 1em; background: #fafafa; }
-.flash          { background: #cee5F5; padding: 0.5em;
-                  border: 1px solid #aacbe2; }
-.error          { background: #f0d6d6; padding: 0.5em; }
-
-
-#menu-outer {
-	height: 50px;
+#content2 {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .table {
@@ -115,6 +91,11 @@ h2 {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
     background-color: #bfafaf;
+}
+
+input[type=radio]{
+  margin-right: 10px;
+  margin-left: 40px;
 }
 
 input[type=text] {

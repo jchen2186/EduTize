@@ -3,13 +3,22 @@
 {% block title %} Add Completed Course {% endblock %}
 
 {% block body %}
-
+<div id= "content">
 <form>
-  NAME OF COURSE<input type="text" name="course">
-  <br>
-  GPA (OUT OF 100): <input type="text" name="GPA">
-  <br>
+  <table width="100%">
+    <tr>
+      <td>
+        <h1>Name of Course</h1><input type="text" name="course">
+      </td>
+      <td>
+        <h1>GPA (out of 100)</h1> <input type="text" name="GPA">
+      </td>
+    </tr>
+  </table>
+  <p></p>
+  <center>
   <input type="submit" value="Submit">
+</center>
 </form>
-
+</div>
 {% endblock %}
