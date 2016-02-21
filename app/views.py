@@ -7,10 +7,18 @@ from app import app
 def index():
 	return render_template("/index.html")
 
-@app.route('/add_course')
-def addCourse():
-	return render_template("/add_course.html")
+@app.route('/new-course')
+def addNewCourse():
+	return render_template("/new_course.html")
 
-@app.route('/add_upcoming_assignment')
-def addUpcoming():
-	return render_template("/add_upcoming_assignment.html")
+@app.route('/completed-course')
+def addCompletedCourse():
+	return render_template("/completed_course.html")
+
+@app.route('/new-task')
+def addNewTask():
+	return render_template("/new_task.html")
+
+@app.route('/completed-task')
+def addCompletedTask():
+	return render_template("/completed_course.html")
