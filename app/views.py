@@ -17,7 +17,7 @@ def addNewCourse():
 		pathName = "data/user001/" + course
 		if ((os.path.isdir(pathName)) == False): # if directory does not exist
 			os.mkdir(pathName) # create the directory
-		pathName += "/" course + ".txt"
+		pathName += "/" + course + ".txt"
 		fo = open(pathName,'w')
 		fo.write(course + "\n")
 		fo.write("\n") # skipping line because this is for actual gpa
@@ -35,7 +35,7 @@ def addCompletedCourse():
 		pathName = "data/user001/" + course
 		if ((os.path.isdir(pathName)) == False): # if directory does not exist
 			os.mkdir(pathName) # create the directory
-		pathName += "/" course + ".txt"
+		pathName += "/" + course + ".txt"
 		fo = open(pathName,'w')
 		fo.write(course + "\n")
 		fo.write(gpa + "\n")
