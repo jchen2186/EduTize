@@ -141,9 +141,11 @@ td.assignment {
   margin-right: 20%;
   background-color: #008888;
   text-align: left;
-  line-height: 10px;
+  line-height: 12px;
+  font-size:12px;
   width: 70%;
   height: 100px;
   font-family: sans-serif;
+  color: #CFCCC9;
   overflow: hidden;
 }
