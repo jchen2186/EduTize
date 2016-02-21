@@ -38,7 +38,7 @@ class Assignment:
                 return(other)
             else:    # if both are due on same day
              #compare the grades for each class
-                if self.course.currGPA < other.course.currGPA:
+                if (self.course.currGPA < other.course.currGPA):
                     return(self)
                 else:
                     return(other)
