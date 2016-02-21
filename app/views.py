@@ -38,6 +38,6 @@ def addCompletedTask():
 		fo.write(course + "\n")
 		fo.write(category + "\n")
 		fo.close()
-		return "Task is added!"
+		return render_template("/completed_task_confirmation.html")
 	else:
 		return render_template("/completed_task.html")
